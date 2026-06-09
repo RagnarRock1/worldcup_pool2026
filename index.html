@@ -998,7 +998,7 @@ const A={
   },
   setDeadline(key,val){
     if(!S.results.locks) S.results.locks={};
-    S.results.locks[key+'_deadline']=val?new Date(val).toISOString():'';
+    S.results.locks[key+'_deadline']=val||'';
     renderTabBody();
   },
   async saveLocks(){
